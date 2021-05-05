@@ -1,0 +1,293 @@
+body {
+    background: #E5E5E5;
+    font-family: 'Roboto', sans-serif;    
+}
+
+.topo {
+    background: #CF2B2B;
+    width: 100%;
+    height: 92px;
+    position: fixed;
+    top: 0;
+    left: 0;    
+    overflow: hidden;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.20);
+    z-index: 5;
+}
+
+.topo h1 {
+    font-family: 'Righteous', cursive;
+    font-size: 44px;
+    color: #FFFFFF;
+    margin-left: 21px;
+    margin-top: 10px;
+}
+
+.topo p {
+    font-size: 18px;
+    color: #FFFFFF;
+    margin-left: 21px;
+    margin-top: 5px;
+}
+
+
+.conteudo p:first-child {
+    font-family: 'Righteous', cursive;
+    font-size: 26px;
+    margin-left: 20px;
+    margin-top: 123px;
+    color: #333333;
+
+}
+
+.conteudo p {
+    font-family: 'Righteous', cursive;
+    font-size: 26px;
+    margin-left: 20px;
+    margin-top: 27px;
+    color: #333333;
+}
+
+.lista-pratos, .lista-bebidas, .lista-sobremesas {    
+    width: 100%;
+    height: 230px;     
+    margin-top: 18px;      
+    padding-top: 5px;
+    padding-bottom: 5px;       
+    overflow-x: scroll;
+    display: flex; 
+    justify-content: space-between;     
+}
+
+.pratos {
+    width: 172px;
+    height: 216px;
+    background: #FFFFFF;    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 15px 15px 15px 15px;        
+    border-radius: 9px;   
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.20);    
+    margin-left: 20px;
+}
+
+
+.itens {
+    width: 172px;
+    height: 216px;
+    background: #FFFFFF;    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 15px 15px 15px 15px;    
+    border-radius: 9px;   
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.20);
+    margin-left: 20px;       
+}
+
+.pratos, .itens p {
+    color:#A6A6A6;
+    font-size: 15px;    
+}
+
+li > span {
+    font-weight: bold;
+    font-size:16px;  
+    color: #333333;
+    margin: 8px 0; 
+    width: 144px; 
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.info span {
+    font-size:16px; 
+    color: black;    
+    margin-top: 8px;
+       
+}
+
+.info .descrição {
+    color: #A6A6A6; 
+    font-size: 15px;
+}
+
+img {
+    width: 144px;
+    height: 87px;
+    border-radius: 4px; 
+         
+}
+
+.lista-sobremesas {
+    margin-bottom: 120px;
+}
+
+
+
+.base {
+    background: #FFFFFF;
+    height: 92px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;    
+    display: flex;
+    justify-content: center;       
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.70);
+}
+
+.selecionar-pedido:disabled {
+    font-family: 'Roboto';
+    background: #CBCBCB;
+    width: 364px;
+    height: 61px;
+    margin-top: 18px;  
+    font-size: 20px;
+    padding-left: 75px; 
+    padding-right: 75px;   
+    color: #FFFFFF;
+    border: none;
+    border-radius: 50px;    
+}
+
+ion-icon {
+    color: #32B72F;    
+    font-size: 17px; 
+    margin: -4px 0px 0px 57px;   
+    z-index: 0;
+}
+
+.selecionar-pedido {
+    font-family: 'Roboto';
+    background: #32B72F;
+    width: 364px;
+    height: 61px;
+    margin-top: 18px;  
+    font-size: 20px;
+    padding-left: 75px; 
+    padding-right: 75px;   
+    color: #FFFFFF;
+    border: none;
+    border-radius: 50px;    
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.selecionado {
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F;
+    border-radius: 9px;
+}
+
+
+.confirmar {
+    width: 377px;
+    height: 353px;
+    background:#50D074;
+    border-radius: 9px;
+    position: fixed;
+    top: calc(50% - 353px/2);
+    left: calc(50% - 377px/2);
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+    padding: 20px; 
+      
+}
+
+.confirmar h1 {
+    font-size: 22px;
+    text-align: center;    
+    color: #FFFFFF;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.confirmar .pedido {
+    display: flex;
+    justify-content: space-between;
+
+}
+.confirmar .pedido .itens-pedido {   
+    display: flex;
+    flex-direction: column;   
+}
+
+.confirmar .pedido .itens-pedido span {
+    font-size: 22px;
+    margin: 12px 0;
+    color: #FFFFFF;     
+}
+
+.confirmar .pedido .valores {    
+    display: flex;
+    flex-direction: column;   
+    align-items: flex-end;    
+}
+
+.confirmar .pedido .valores span {
+    font-size: 22px;
+    margin: 12px 0; 
+    color: #FFFFFF;  
+}
+
+.confirmar .confirmar-pedido {
+    background: #FFFFFF;
+    font-family: 'Roboto';
+    color: #50D074;
+    width: 329px;
+    height: 52px;     
+    margin: 20px 0px 0px 5px;
+    color: #50D074;          
+    font-size: 22px;
+    font-weight: 500;  
+    border-radius: 100px;  
+    border: none;    
+}
+
+.confirmar-pedido:focus{
+    outline-style: none;
+}
+
+.cancelar-pedido:focus{
+    outline-style: none;
+}
+
+
+.confirmar .cancelar-pedido {
+    background: #50D074;
+    font-family: 'Roboto';
+    color: #FFFFFF;
+    width: 329px;
+    height: 45px;
+    margin: 0px 0px 0px 5px;   
+    font-size: 20px;
+    font-weight: 500; 
+    border-radius: 100px; 
+    border: none;    
+}
+
+.escondido {
+    display: none;
+}
+
+.fundo {
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.estilo {
+    font-size: 22px;
+    margin: 12px 0;
+    color: #FFFFFF;     
+}
