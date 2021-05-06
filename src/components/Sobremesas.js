@@ -1,35 +1,32 @@
-import Sobremesa from "./Sobremesa";
+import Item from "./Item";
 
 export default function Sobremesas() {
   const listaSobremesas = [
     {
       imagem: "/assets/img/pudim.jpg",
-      sobremesa: "Pudim",
+      nomeItem: "Pudim",
       classe: "sobremesa1",
       info: {
         descricao: "Apenas um delicioso pudim",
-        preco: "R$ 7,90",
-        contador: 0,
+        preco: "R$ 7,90",        
       },
     },
     {
       imagem: "/assets/img/torta.jpg",
-      sobremesa: "Torta de limão",
+      nomeItem: "Torta de limão",
       classe: "sobremesa2",
       info: {
         descricao: "Uma fatia generosa o suficiente pra não enjoar",
-        preco: "R$ 4,90",
-        contador: 0,
+        preco: "R$ 4,90",        
       },
     },
     {
       imagem: "/assets/img/bolo.jpg",
-      sobremesa: "Bolo de laranja",
+      nomeItem: "Bolo de laranja",
       classe: "sobremesa3",
       info: {
         descricao: "Melhor que o da Vó Alzira",
-        preco: "R$ 10,90",
-        contador: 0,
+        preco: "R$ 10,90",        
       },
     },
   ];
@@ -40,9 +37,9 @@ export default function Sobremesas() {
       <ul class="lista-sobremesas">
         {listaSobremesas.map((item) => {
           return (
-            <Sobremesa
+            <Item
               imagem={item.imagem}
-              sobremesa={item.sobremesa}
+              nomeItem={item.nomeItem}
               classe={item.classe}
               descricao={item.info.descricao}
               preco={item.info.preco}

@@ -1,11 +1,11 @@
-import Prato from "./Prato";
+import Item from "./Item";
 import React from "react";
 
 export default function Pratos() {  
   const listaPratos = [
     {
       imagem: "/assets/img/strogonoff.jpg",
-      prato: "Strogonoff de Frango",
+      nomeItem: "Strogonoff de Frango",
       classe: "prato1",
       info: {
         descricao: "Clássico, dispensa comentários",
@@ -14,7 +14,7 @@ export default function Pratos() {
     },
     {
       imagem: "/assets/img/yinyang.png",
-      prato: "Ying Yang",
+      nomeItem: "Ying Yang",
       classe: "prato2",
       info: {
         descricao: "Um pouco de batata, um pouco de salada",
@@ -23,7 +23,7 @@ export default function Pratos() {
     },
     {
       imagem: "/assets/img/lasanha.jpg",
-      prato: "Lasanha à bolonhesa",
+      nomeItem: "Lasanha à bolonhesa",
       classe: "prato3",
       info: {
         descricao: "Massa e molho caseiros",
@@ -38,9 +38,9 @@ export default function Pratos() {
       <ul class="lista-pratos">
         {listaPratos.map((item) => {
           return (
-            <Prato
+            <Item
               imagem={item.imagem}
-              prato={item.prato}
+              nomeItem={item.nomeItem}
               classe={item.classe}
               descricao={item.info.descricao}
               preco={item.info.preco}

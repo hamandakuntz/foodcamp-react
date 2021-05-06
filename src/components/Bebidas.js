@@ -1,35 +1,32 @@
-import Bebida from "./Bebida";
+import Item from "./Item";
 
 export default function Bebidas() {
   const listaBebidas = [
     {
       imagem: "/assets/img/coca.jpg",
-      bebida: "Pouquíssima coca",
+      nomeItem: "Pouquíssima coca",
       classe: "item1",
       info: {
         descricao: "Lata 350ml, acaba em dois goles",
-        preco: "R$ 4,90",
-        contador: 0,
+        preco: "R$ 4,90",        
       },
     },
     {
       imagem: "/assets/img/coca2.jpg",
-      bebida: "Pouca coca",
+      nomeItem: "Pouca coca",
       classe: "item2",
       info: {
         descricao: "600ml, acaba antes do prato",
-        preco: "R$ 8,90",
-        contador: 0,
+        preco: "R$ 8,90",        
       },
     },
     {
       imagem: "/assets/img/coca3.jpg",
-      bebida: "Coca suficiente",
+      nomeItem: "Coca suficiente",
       classe: "item3",
       info: {
         descricao: "2l, essa dá e ainda sobra um chorinho",
-        preco: "R$ 11,90",
-        contador: 0,
+        preco: "R$ 11,90",        
       },
     },
   ];
@@ -40,9 +37,9 @@ export default function Bebidas() {
       <ul class="lista-bebidas">
         {listaBebidas.map((item) => {
           return (
-            <Bebida
+            <Item
               imagem={item.imagem}
-              bebida={item.bebida}
+              nomeItem={item.nomeItem}
               classe={item.classe}
               descricao={item.info.descricao}
               preco={item.info.preco}

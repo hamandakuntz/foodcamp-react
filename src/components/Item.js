@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function Prato(props) {
+export default function Item(props) {
   const [ehSelecionado, setEhSelecionado] = React.useState(false);
   const [contador, setContador] = React.useState(1);
-  const { prato, classe, descricao, preco, imagem } = props;
+  const { nomeItem, classe, descricao, preco, imagem } = props;
 
   return (
     <>
@@ -11,8 +11,8 @@ export default function Prato(props) {
         onClick={alteraSelecionado}
         class={`pratos ${classe} ${ehSelecionado ? "selecionado" : ""}`}
       >
-        <img src={imagem} alt={prato} />
-        <span>{prato}</span>
+        <img src={imagem} alt={nomeItem} />
+        <span>{nomeItem}</span>
         <div class="info">
           <span class="descrição">{descricao}</span>
           <div class="info2">
@@ -34,6 +34,9 @@ export default function Prato(props) {
 
   function alteraSelecionado() {
     ehSelecionado ? setEhSelecionado(false) : setEhSelecionado(true);
+    if(ehSelecionado) {
+        reseta();
+    }
   }
 
   function reseta() {
