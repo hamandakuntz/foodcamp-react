@@ -9,6 +9,7 @@ export default function Sobremesas() {
       info: {
         descricao: "Apenas um delicioso pudim",
         preco: "R$ 7,90",
+        contador: 0,
       },
     },
     {
@@ -18,6 +19,7 @@ export default function Sobremesas() {
       info: {
         descricao: "Uma fatia generosa o suficiente pra não enjoar",
         preco: "R$ 4,90",
+        contador: 0,
       },
     },
     {
@@ -27,6 +29,7 @@ export default function Sobremesas() {
       info: {
         descricao: "Melhor que o da Vó Alzira",
         preco: "R$ 10,90",
+        contador: 0,
       },
     },
   ];
@@ -43,6 +46,7 @@ export default function Sobremesas() {
               classe={item.classe}
               descricao={item.info.descricao}
               preco={item.info.preco}
+              contador={item.info.contador}
             />
           );
         })}

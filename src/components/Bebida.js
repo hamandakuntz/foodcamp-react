@@ -1,15 +1,30 @@
+import React from "react";
+
 export default function Bebida(props) {
+  const [ehSelecionado, setEhSelecionado] = React.useState(false);
+  const { classe, imagem, bebida, descricao, preco, contador } = props;
+
   return (
     <>
-      <li class={`itens ${props.classe}`}>
-        <img src={props.imagem} alt={props.bebida}/>
-        <span>{props.bebida}</span>
+      <li onClick={alteraSelecionado} class={`itens ${classe} ${ehSelecionado ? "selecionado" : ""}`}>
+        <img src={imagem} alt={bebida} />
+        <span>{bebida}</span>
         <div class="info">
-          <span class="descrição">{props.descricao}</span>
-          <span>{props.preco}</span>
-          <ion-icon name="checkmark-circle" class="escondido"></ion-icon>
+          <span class="descrição">{descricao}</span>
+          <div class="info2">
+            <span>{preco}</span>
+            <span>
+              <button class="contador">-</button>
+              {contador}
+              <button class="contador">+</button>
+            </span>
+          </div>
         </div>
       </li>
     </>
   );
+
+  function alteraSelecionado() {
+    ehSelecionado ? setEhSelecionado(false) : setEhSelecionado(true);    
+  }
 }

@@ -1,6 +1,7 @@
 import Prato from "./Prato";
+import React from "react";
 
-export default function Pratos() {
+export default function Pratos() {  
   const listaPratos = [
     {
       imagem: "/assets/img/strogonoff.jpg",
@@ -8,7 +9,7 @@ export default function Pratos() {
       classe: "prato1",
       info: {
         descricao: "Clássico, dispensa comentários",
-        preco: "R$15,90",
+        preco: "R$15,90",        
       },
     },
     {
@@ -17,7 +18,7 @@ export default function Pratos() {
       classe: "prato2",
       info: {
         descricao: "Um pouco de batata, um pouco de salada",
-        preco: "R$ 14,90",
+        preco: "R$ 14,90",        
       },
     },
     {
@@ -26,7 +27,7 @@ export default function Pratos() {
       classe: "prato3",
       info: {
         descricao: "Massa e molho caseiros",
-        preco: "R$ 19,90",
+        preco: "R$ 19,90",       
       },
     },
   ];
@@ -43,6 +44,7 @@ export default function Pratos() {
               classe={item.classe}
               descricao={item.info.descricao}
               preco={item.info.preco}
+              contador={item.info.contador}
             />
           );
         })}

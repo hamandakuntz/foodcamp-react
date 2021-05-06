@@ -1,15 +1,30 @@
+import React from "react";
+
 export default function Sobremesa(props) {
+  const [ehSelecionado, setEhSelecionado] = React.useState(false);
+  const {imagem, sobremesa, descricao, preco, contador} = props;
+
   return (
     <>
-      <li class="pratos sobremesa1">
-        <img src={props.imagem} alt={props.sobremesa}/>
-        <span>{props.sobremesa}</span>
+      <li onClick={alteraSelecionado} class={`pratos sobremesa1 ${ehSelecionado ? "selecionado" : ""}`}>
+        <img src={imagem} alt={sobremesa}/>
+        <span>{sobremesa}</span>
         <div class="info">
-          <span class="descrição">{props.descricao}</span>
-          <span>{props.preco}</span>
-          <ion-icon name="checkmark-circle" class="escondido"></ion-icon>
+          <span class="descrição">{descricao}</span>
+          <div class="info2">
+            <span>{preco}</span>
+            <span>
+              <button class="contador">-</button>
+              {contador}
+              <button class="contador">+</button>
+            </span>
+          </div>
         </div>
       </li>
     </>
   );
+
+  function alteraSelecionado() {
+    ehSelecionado ? setEhSelecionado(false) : setEhSelecionado(true);    
+  }
 }

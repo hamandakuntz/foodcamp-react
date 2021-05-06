@@ -9,6 +9,7 @@ export default function Bebidas() {
       info: {
         descricao: "Lata 350ml, acaba em dois goles",
         preco: "R$ 4,90",
+        contador: 0,
       },
     },
     {
@@ -18,6 +19,7 @@ export default function Bebidas() {
       info: {
         descricao: "600ml, acaba antes do prato",
         preco: "R$ 8,90",
+        contador: 0,
       },
     },
     {
@@ -27,6 +29,7 @@ export default function Bebidas() {
       info: {
         descricao: "2l, essa dá e ainda sobra um chorinho",
         preco: "R$ 11,90",
+        contador: 0,
       },
     },
   ];
@@ -43,6 +46,7 @@ export default function Bebidas() {
               classe={item.classe}
               descricao={item.info.descricao}
               preco={item.info.preco}
+              contador={item.info.contador}
             />
           );
         })}
