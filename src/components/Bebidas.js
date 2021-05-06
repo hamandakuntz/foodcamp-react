@@ -1,6 +1,8 @@
 import Item from "./Item";
 
-export default function Bebidas() {
+export default function Bebidas(props) {
+  const {todasBebidas, setTodasBebidas} = props;
+
   const listaBebidas = [
     {
       imagem: "/assets/img/coca.jpg",
@@ -42,8 +44,9 @@ export default function Bebidas() {
               nomeItem={item.nomeItem}
               classe={item.classe}
               descricao={item.info.descricao}
-              preco={item.info.preco}
-              contador={item.info.contador}
+              preco={item.info.preco}              
+              todosItens={todasBebidas}
+              setTodosItens={setTodasBebidas}
             />
           );
         })}

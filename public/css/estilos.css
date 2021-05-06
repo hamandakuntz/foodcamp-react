@@ -3,6 +3,11 @@ body {
     font-family: 'Roboto', sans-serif;    
 }
 
+button:hover, li:hover {
+    cursor: pointer;
+}
+
+
 .topo {
     background: #CF2B2B;
     width: 100%;

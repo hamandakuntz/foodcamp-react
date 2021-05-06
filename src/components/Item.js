@@ -1,9 +1,10 @@
 import React from "react";
 
-export default function Item(props) {
+export default function Item(props) {  
   const [ehSelecionado, setEhSelecionado] = React.useState(false);
   const [contador, setContador] = React.useState(1);
-  const { nomeItem, classe, descricao, preco, imagem } = props;
+  const {nomeItem, classe, descricao, preco, imagem} = props;
+  const {todosItens, setTodosItens} = props;
 
   return (
     <>
@@ -35,8 +36,11 @@ export default function Item(props) {
   function alteraSelecionado() {
     ehSelecionado ? setEhSelecionado(false) : setEhSelecionado(true);
     if(ehSelecionado) {
-        reseta();
-    }
+      reseta();
+      excluiItens();
+    } else {
+      incluiItens();
+    }    
   }
 
   function reseta() {
@@ -52,5 +56,20 @@ export default function Item(props) {
     } else {
       setContador(contador + 1);
     }
+  }  
+
+  function incluiItens(){  
+    const itemSelecionado = {
+      nome: nomeItem,
+      preco: preco,
+      contador: contador,
+    }    
+    const novaArray = [...todosItens, itemSelecionado];
+    setTodosItens(novaArray);  
+  }
+
+  function excluiItens(){
+    const novaArray = todosItens.filter((item) => item.nome !== nomeItem);
+    setTodosItens(novaArray);
   }
 }

@@ -1,6 +1,7 @@
 import Item from "./Item";
 
-export default function Sobremesas() {
+export default function Sobremesas(props) {
+  const {todasSobremesas, setTodasSobremesas} = props;
   const listaSobremesas = [
     {
       imagem: "/assets/img/pudim.jpg",
@@ -44,6 +45,8 @@ export default function Sobremesas() {
               descricao={item.info.descricao}
               preco={item.info.preco}
               contador={item.info.contador}
+              todosItens={todasSobremesas}
+              setTodosItens={setTodasSobremesas}
             />
           );
         })}

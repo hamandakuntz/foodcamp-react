@@ -1,7 +1,8 @@
 import Item from "./Item";
 import React from "react";
 
-export default function Pratos() {  
+export default function Pratos(props) {  
+  const {todosPratos, setTodosPratos} = props;
   const listaPratos = [
     {
       imagem: "/assets/img/strogonoff.jpg",
@@ -43,8 +44,9 @@ export default function Pratos() {
               nomeItem={item.nomeItem}
               classe={item.classe}
               descricao={item.info.descricao}
-              preco={item.info.preco}
-              contador={item.info.contador}
+              preco={item.info.preco}              
+              todosItens={todosPratos}
+              setTodosItens={setTodosPratos}
             />
           );
         })}
