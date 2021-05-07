@@ -56,10 +56,7 @@ export default function ConfirmarPedido(props) {
         return;
       } else sobremesas += item.nome + " (" + item.contador + "x) ";
     });
-
-    console.clear();
-    console.log(pratos);
-
+    
     window.location.href =
       "https://wa.me/?text=" +
       encodeURIComponent(

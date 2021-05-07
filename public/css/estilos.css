@@ -159,7 +159,10 @@ img {
     margin-bottom: 120px;
 }
 
-
+a {    
+    padding-left: 25px;
+    padding-right: 25px;
+}
 
 .base {
     background: #FFFFFF;
@@ -175,16 +178,16 @@ img {
 
 .selecionar-pedido:disabled {
     font-family: 'Roboto';
-    background: #CBCBCB;
-    width: 364px !important;
+    background: #CBCBCB;  
+    width: auto !important;
     height: 61px;
     margin-top: 18px;  
     font-size: 20px;
-    padding-left: 75px; 
-    padding-right: 75px;   
+    padding-left: 50px; 
+    padding-right: 50px;   
     color: #FFFFFF;
-    border: none;
-    border-radius: 50px;    
+    font-weight: 500;  
+      
 }
 
 ion-icon {
@@ -196,8 +199,8 @@ ion-icon {
 
 .selecionar-pedido {
     font-family: 'Roboto';
-    background: #32B72F;
-    width: 364px;
+    background: #32B72F;   
+    width: auto !important; 
     height: 61px;
     margin-top: 18px;  
     font-size: 20px;
@@ -205,7 +208,8 @@ ion-icon {
     padding-right: 75px;   
     color: #FFFFFF;
     border: none;
-    border-radius: 50px;    
+    border-radius: 50px; 
+    font-weight: 500;    
 }
 
 ::-webkit-scrollbar {
@@ -336,7 +340,38 @@ ion-icon {
 
 
 @media (max-width: 334px){
-    .selecionar-pedido{
-        padding: 0 64px !important;
+    .selecionar-pedido {
+        padding: 0 70px !important;   
+        width: 100% !important;  
+        font-weight: 500;  
+    }
+
+    .selecionar-pedido:disabled {
+        padding: 0 42px !important;   
+        width: 100% !important; 
+        font-weight: 500;   
+    }
+
+    .confirmar {
+        width: 100%;
+        top: 150px;
+        left: 0;
+        padding: 10px;
+    }
+
+    .confirmar-pedido {
+        width: 315px;
+    }
+
+    .botoes-revisao {
+        margin-top: 300px;
+    }
+
+    .confirmar .pedido .itens-pedido span {
+        margin: 5px 0;
+    }
+
+    .fundo h1 {
+        margin-top: 110px;
     }
 }

@@ -38,7 +38,7 @@ export default function Sobremesas(props) {
   return (
     <>
       <p>Por fim, sua sobremesa</p>
-      <ul class="lista-sobremesas">
+      <ul className="lista-sobremesas">
         {listaSobremesas.map((item) => {
           return (
             <Item

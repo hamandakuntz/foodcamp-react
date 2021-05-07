@@ -39,7 +39,7 @@ export default function Bebidas(props) {
   return (
     <>
       <p>Agora, sua coca</p>
-      <ul class="lista-bebidas">
+      <ul className="lista-bebidas">
         {listaBebidas.map((item) => {
           return (
             <Item

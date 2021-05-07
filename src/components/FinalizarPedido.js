@@ -3,9 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function FinalizarPedido(props) {
   const { todosPratos, todasBebidas, todasSobremesas } = props;
-  const controlaBotao = props.todos;
-
-  console.log(todosPratos);
+  const controlaBotao = props.todos;  
 
   return (
     <div className="base">

@@ -39,7 +39,7 @@ export default function Pratos(props) {
   return (
     <>
       <p>Primeiro, seu prato</p>
-      <ul class="lista-pratos">
+      <ul className="lista-pratos">
         {listaPratos.map((item) => {
           return (
             <Item
