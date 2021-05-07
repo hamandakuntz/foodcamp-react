@@ -4,7 +4,7 @@ export default function Item(props) {
   const [ehSelecionado, setEhSelecionado] = React.useState(false);
   const [contador, setContador] = React.useState(1);
   const { nomeItem, classe, descricao, preco, imagem } = props;
-  const { todosItens, setTodosItens } = props;
+  const { todosItens, setTodosItens } = props; 
 
   return (
     <>
@@ -81,8 +81,7 @@ export default function Item(props) {
         return item;
       }      
     });
-    setTodosItens(itensAtualizados);
-    console.log(itensAtualizados)
+    setTodosItens(itensAtualizados);    
   }
 
   function incluiItens() {

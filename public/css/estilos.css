@@ -219,31 +219,25 @@ ion-icon {
 
 
 .confirmar {
-    width: 377px;
-    height: 353px;
-    background:#50D074;
+    width: 377px;    
+    background: #FFFFFF;
     border-radius: 9px;
     position: fixed;
     top: calc(50% - 353px/2);
     left: calc(50% - 377px/2);
-    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
-    padding: 20px; 
-      
+    box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.15);
+    padding: 20px;       
 }
 
 .confirmar h1 {
     font-size: 22px;
     text-align: center;    
-    color: #FFFFFF;
+    color: #333333;
     font-weight: 500;
     margin-bottom: 5px;
 }
 
-.confirmar .pedido {
-    display: flex;
-    justify-content: space-between;
 
-}
 .confirmar .pedido .itens-pedido {   
     display: flex;
     flex-direction: column;   
@@ -252,7 +246,10 @@ ion-icon {
 .confirmar .pedido .itens-pedido span {
     font-size: 22px;
     margin: 12px 0;
-    color: #FFFFFF;     
+    color: #333333; 
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;    
 }
 
 .confirmar .pedido .valores {    
@@ -264,17 +261,16 @@ ion-icon {
 .confirmar .pedido .valores span {
     font-size: 22px;
     margin: 12px 0; 
-    color: #FFFFFF;  
+    color: #333333;  
 }
 
-.confirmar .confirmar-pedido {
-    background: #FFFFFF;
+.confirmar-pedido {
+    background: #50D074;
     font-family: 'Roboto';
-    color: #50D074;
+    color: #FFFFFF;
     width: 329px;
     height: 52px;     
-    margin: 20px 0px 0px 5px;
-    color: #50D074;          
+    margin: 20px 0px 0px 5px;             
     font-size: 22px;
     font-weight: 500;  
     border-radius: 100px;  
@@ -290,10 +286,10 @@ ion-icon {
 }
 
 
-.confirmar .cancelar-pedido {
-    background: #50D074;
+.cancelar-pedido {
+    background: inherit;
     font-family: 'Roboto';
-    color: #FFFFFF;
+    color: #777777;
     width: 329px;
     height: 45px;
     margin: 0px 0px 0px 5px;   
@@ -316,11 +312,28 @@ ion-icon {
     left: 0;
 }
 
+.fundo h1 {
+    margin-top: 120px;
+    font-family: 'Righteous';
+    font-size: 26px;
+    padding-left: 20px;
+    color: #333333;
+}
+
 .estilo {
     font-size: 22px;
     margin: 12px 0;
     color: #FFFFFF;     
 }
+
+.botoes-revisao{
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    margin-top: 400px;
+    
+}
+
 
 @media (max-width: 334px){
     .selecionar-pedido{
