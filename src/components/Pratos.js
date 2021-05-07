@@ -5,30 +5,33 @@ export default function Pratos(props) {
   const {todosPratos, setTodosPratos} = props;
   const listaPratos = [
     {
+      id: 1,
       imagem: "/assets/img/strogonoff.jpg",
       nomeItem: "Strogonoff de Frango",
       classe: "prato1",
       info: {
         descricao: "Clássico, dispensa comentários",
-        preco: "R$15,90",        
+        preco: "15,90",        
       },
     },
     {
+      id: 2,
       imagem: "/assets/img/yinyang.png",
       nomeItem: "Ying Yang",
       classe: "prato2",
       info: {
         descricao: "Um pouco de batata, um pouco de salada",
-        preco: "R$ 14,90",        
+        preco: "14,90",        
       },
     },
     {
+      id: 3,
       imagem: "/assets/img/lasanha.jpg",
       nomeItem: "Lasanha à bolonhesa",
       classe: "prato3",
       info: {
         descricao: "Massa e molho caseiros",
-        preco: "R$ 19,90",       
+        preco: "19,90",       
       },
     },
   ];
@@ -44,9 +47,10 @@ export default function Pratos(props) {
               nomeItem={item.nomeItem}
               classe={item.classe}
               descricao={item.info.descricao}
-              preco={item.info.preco}              
+              preco={item.info.preco}            
               todosItens={todosPratos}
               setTodosItens={setTodosPratos}
+              key={item.id}
             />
           );
         })}

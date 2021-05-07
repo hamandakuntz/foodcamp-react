@@ -10,34 +10,28 @@ export default function Conteudo() {
   const [todasSobremesas, setTodasSobremesas] = React.useState([]);
   let todos = true;
 
-  if(todosPratos.length > 0 && todasBebidas.length > 0 && todasSobremesas.length > 0) {
+  if (
+    todosPratos.length > 0 &&
+    todasBebidas.length > 0 &&
+    todasSobremesas.length > 0
+  ) {
     todos = false;
   }
 
-
-
-  console.clear()
-  console.log(todosPratos)
-  console.log(todasBebidas)
-  console.log(todasSobremesas)
   return (
-    <body>
-      <div class="conteudo">
-        <Pratos
-          todosPratos={todosPratos}
-          setTodosPratos={setTodosPratos}
-        />
-        <Bebidas
-          todasBebidas={todasBebidas}
-          setTodasBebidas={setTodasBebidas}
-        />
-        <Sobremesas
-          todasSobremesas={todasSobremesas}
-          setTodasSobremesas={setTodasSobremesas}
-        />
-        <FinalizarPedido todos={todos}   
-        />
-      </div>
-    </body>
+    <div className="conteudo">
+      <Pratos todosPratos={todosPratos} setTodosPratos={setTodosPratos} />
+      <Bebidas todasBebidas={todasBebidas} setTodasBebidas={setTodasBebidas} />
+      <Sobremesas
+        todasSobremesas={todasSobremesas}
+        setTodasSobremesas={setTodasSobremesas}
+      />
+      <FinalizarPedido
+        todos={todos}
+        todosPratos={todosPratos}
+        todasBebidas={todasBebidas}
+        todasSobremesas={todasSobremesas}
+      />
+    </div>
   );
 }
